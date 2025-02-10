@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header & Slideshow */
+  header {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  /* Slideshow Container */
+  .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Slide Base Style */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 15s infinite;
+  }
+  
+  /* Individual Slides with Animation Delays */
+  .slide1 {
+    background-image: url('./MENN.webp');
+    animation-delay: 0s;
+  }
+  .slide2 {
+    background-image: url('./Army.jpg');
+    animation-delay: 5s;
+  }
+  .slide3 {
+    background-image: url('./LOG.png');
+    animation-delay: 10s;
+  }
+  
+  /* Keyframes for Fade Animation */
+  @keyframes fade {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    33.33% { opacity: 1; }
+    43.33% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  
+  /* Header Content (Overlay Text) */
+  .header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+  }
+  .header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    animation: slideInDown 1s ease-out;
+  }
+  .header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    animation: slideInUp 1s ease-out;
+  }
+  
+  /* Header Text Animations */
+  @keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 40px 20px;
+  }
+  main section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  main section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  main section p,
+  main section ul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Core Values List */
+  #values ul {
+    list-style: disc inside;
+    padding-left: 20px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+  }
+  
